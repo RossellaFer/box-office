@@ -3,14 +3,14 @@ import Navs from './Navs';
 import AppTitle from './AppTitle';
 
 const MainLayout = () => {
-  return(
+  return (
     <div>
-        <AppTitle />
-        <Navs />
-        
-        <Outlet />
+      <AppTitle />
+      <Navs />
+
+      <Outlet />
     </div>
-  )
-}
+  );
+};
 
 export default MainLayout;

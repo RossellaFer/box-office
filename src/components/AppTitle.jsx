@@ -3,7 +3,7 @@ export default function AppTitle(props) {
     title = 'Box Office',
     subtitle = 'Are you looking for a movie or an actor?',
   } = props;
-  
+
   return (
     <div>
       <h1>{title}</h1>
