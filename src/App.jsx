@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Starred from './pages/Starred';
 import NotFound from './pages/NotFound';
 import MainLayout from './components/MainLayout';
+import ShowPage from './pages/ShowPage';
 
 function App() {
   return (
@@ -13,12 +14,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/starred" element={<Starred />}/>
       </Route>
-
-      {/* <Route path="/" element={<Home />} />
-      <Route path="dashboard" element={<Dashboard />}>
-        <Route index element={<RecentActivity />} />
-        <Route path="project/:id" element={<Project />} />
-      </Route> */}
+      <Route path="/show/:showId" element={<ShowPage />}/>
     </Routes>
   </BrowserRouter>
   );
