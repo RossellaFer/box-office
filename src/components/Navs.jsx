@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const LINKS = [
   {
-    text: 'HOME',
+    text: 'Home',
     to: '/',
   },
   {
