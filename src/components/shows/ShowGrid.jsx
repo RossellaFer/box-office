@@ -1,6 +1,18 @@
 import ShowCard from './ShowCard';
+import { useStarredShows } from '../../lib/useStarredShows';
 
 const ShowGrid = ({ shows }) => {
+  const [starredShows, dispatchStarred] = useStarredShows();
+
+  const onStarClick = showId => {
+    const isStarred = starredShows.includes(showId);
+    if (isStarred) {
+      dispatchStarred({ type: 'UNSTAR', showId });
+    } else {
+      dispatchStarred({ type: 'STAR', showId });
+    }
+  };
+
   return (
     <div>
       {shows.map(data => (
@@ -10,6 +22,8 @@ const ShowGrid = ({ shows }) => {
           image={data.show.image ? data.show.image.medium : '/not_found.png'}
           summary={data.show.summary}
           id={data.show.id}
+          onStarClick={onStarClick}
+          isStarred={starredShows.includes(data.show.id)}
         />
       ))}
     </div>

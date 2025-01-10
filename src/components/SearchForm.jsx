@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { useSrcStr } from '../lib/usePersistedState';
 
 const SearchForm = ({ onSearch }) => {
   const [searchOption, setSearchOption] = useState('shows');
-  const [searchStr, setSearchStr] = useState('');
+  const [searchStr, setSearchStr] = useSrcStr();
 
   const onSearchInputChange = e => {
     setSearchStr(e.target.value);
