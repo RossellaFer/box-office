@@ -1,8 +1,10 @@
+import { TextCenter } from '../components/common/TextCenter';
+
 const NotFound = () => {
   return (
-    <div>
+    <TextCenter>
       <h1>Not found</h1>
-    </div>
+    </TextCenter>
   );
 };
 

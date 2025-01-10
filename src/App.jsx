@@ -5,22 +5,25 @@ import Starred from './pages/Starred';
 import NotFound from './pages/NotFound';
 import MainLayout from './components/MainLayout';
 import Show from './pages/Show';
+import { GlobalTheme } from './theme';
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="*" element={<NotFound />} />
-          <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/starred" element={<Starred />} />
-          </Route>
-          <Route path="/show/:showId" element={<Show />} />
-        </Routes>
-      </BrowserRouter>
+      <GlobalTheme>
+        <BrowserRouter>
+          <Routes>
+            <Route path="*" element={<NotFound />} />
+            <Route element={<MainLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/starred" element={<Starred />} />
+            </Route>
+            <Route path="/show/:showId" element={<Show />} />
+          </Routes>
+        </BrowserRouter>
+      </GlobalTheme>
     </QueryClientProvider>
   );
 }
