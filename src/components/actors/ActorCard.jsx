@@ -6,9 +6,9 @@ const ActorCard = ({ name, image, birthday, deathday, country, gender }) => {
       <SearchImgWrapper>
         <img src={image} alt={name} />
       </SearchImgWrapper>
-      <h1>
+      <h2>
         {name} {!!gender && `(${gender})`}
-      </h1>
+      </h2>
       <p>{country ? `Comes from ${country}` : `No country known`}</p>
       {!!birthday && <p>Born {birthday}</p>}
       <p>{deathday ? `Died in ${deathday}` : 'Alive'}</p>
