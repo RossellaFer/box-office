@@ -2,7 +2,7 @@
   "name": "box-office",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/RossellaFer/box-office",
+  "homepage": "https://rossellafer.github.io/box-office/",
   "dependencies": {
     "@tanstack/react-query": "^5.63.0",
     "cra-template-pwa": "2.0.0",
